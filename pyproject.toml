@@ -9,6 +9,14 @@ python = "^3.10"
 Pygments = "^2.10.0"
 language-tool-python = "^2.6.2"
 
+[tool.poetry.dev-dependencies]
+pyproject-flake8 = "^0.0.1-alpha.2"
+flake8-bugbear = "^21.11.29"
+flake8-mypy = "^17.8.0"
+
+[tool.flake8]
+max-complexity = 10
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
