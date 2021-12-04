@@ -19,8 +19,8 @@ def main():
     for (idx, s) in comments:
         m = lt.check(s)
         for i in m:
-            diagnostic(src, idx + i.offset, i.errorLength,
-                       args.file, i.ruleId, i.message, i.replacements)
+            diagnostic(src, idx + i.offset, i.errorLength, args.file, i.ruleId,
+                       i.message, i.replacements)
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,8 +37,8 @@ def extract_comment(code: str,
             if ty in token.Comment]
 
 
-def diagnostic(src: str, idx: int,
-               lenght: int, file: str, id: str, msg: str, help: str):
+def diagnostic(src: str, idx: int, lenght: int, file: str, id: str, msg: str,
+               help: str):
     line = src[:idx].count('\n') + 1
     col = src[:idx][::-1].find('\n') + 1
 
@@ -48,8 +48,8 @@ def diagnostic(src: str, idx: int,
     print(f' - {file}:{line}:{col}')
     print('{} |'.format(' ' * line_boarder))
     print(f'{line} | {src.splitlines()[line-1]}')
-    print('{} | {}{} '
-          .format(' ' * line_boarder, ' ' * (col - 1), '^' * lenght), end='')
+    print('{} | {}{} '.format(' ' * line_boarder, ' ' * (col-1), '^' * lenght),
+          end='')
     if len(help) != 0:
         print('help: {}'.format(', '.join(help)))
     print()
