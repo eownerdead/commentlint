@@ -34,7 +34,7 @@ def parse_args() -> argparse.Namespace:
 def extract_comment(code: str,
                     lexer: lexer.Lexer) -> T.List[T.Tuple[int, str]]:
     return [(idx, s) for (idx, ty, s) in lexer.get_tokens_unprocessed(code)
-            if ty in token.Comment]
+            if ty in [token.Comment.Multiline, token.Comment.Single]]
 
 
 def diagnostic(src: str, idx: int, lenght: int, file: str, id: str, msg: str,
