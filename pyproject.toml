@@ -12,12 +12,16 @@ language-tool-python = "^2.6.2"
 [tool.poetry.dev-dependencies]
 pyproject-flake8 = "^0.0.1-alpha.2"
 flake8-bugbear = "^21.11.29"
-flake8-mypy = "^17.8.0"
 yapf = "^0.31.0"
 isort = "^5.10.1"
+mypy = "^0.910"
+types-Pygments = "^2.9.5"
 
 [tool.flake8]
 max-complexity = 10
+
+[tool.mypy]
+ignore_missing_imports = true
 
 [tool.yapf]
 ARITHMETIC_PRECEDENCE_INDICATION = true

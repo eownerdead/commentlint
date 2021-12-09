@@ -68,19 +68,6 @@ flake8 = ">=3.0.0"
 dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit"]
 
 [[package]]
-name = "flake8-mypy"
-version = "17.8.0"
-description = "A plugin for flake8 integrating mypy."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-attrs = "*"
-flake8 = ">=3.0.0"
-mypy = "*"
-
-[[package]]
 name = "idna"
 version = "3.3"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -226,6 +213,25 @@ notebook = ["ipywidgets (>=6)"]
 telegram = ["requests"]
 
 [[package]]
+name = "types-docutils"
+version = "0.17.1"
+description = "Typing stubs for docutils"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-pygments"
+version = "2.9.5"
+description = "Typing stubs for Pygments"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+types-docutils = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.0.1"
 description = "Backported and Experimental Type Hints for Python 3.6+"
@@ -257,7 +263,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "54276a65811dbd4ba6c772d0ced966f9947db5664fa289d47c2d333261526da4"
+content-hash = "ba205e7a4c45ec853a32add8fce378cd2acc2b8ec5502d372c25591683e0eff6"
 
 [metadata.files]
 attrs = [
@@ -283,10 +289,6 @@ flake8 = [
 flake8-bugbear = [
     {file = "flake8-bugbear-21.11.29.tar.gz", hash = "sha256:8b04cb2fafc6a78e1a9d873bd3988e4282f7959bb6b0d7c1ae648ec09b937a7b"},
     {file = "flake8_bugbear-21.11.29-py36.py37.py38-none-any.whl", hash = "sha256:179e41ddae5de5e3c20d1f61736feeb234e70958fbb56ab3c28a67739c8e9a82"},
-]
-flake8-mypy = [
-    {file = "flake8-mypy-17.8.0.tar.gz", hash = "sha256:47120db63aff631ee1f84bac6fe8e64731dc66da3efc1c51f85e15ade4a3ba18"},
-    {file = "flake8_mypy-17.8.0-py35.py36-none-any.whl", hash = "sha256:cff009f4250e8391bf48990093cff85802778c345c8449d6498b62efefeebcbc"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
@@ -360,6 +362,14 @@ toml = [
 tqdm = [
     {file = "tqdm-4.62.3-py2.py3-none-any.whl", hash = "sha256:8dd278a422499cd6b727e6ae4061c40b48fce8b76d1ccbf5d34fca9b7f925b0c"},
     {file = "tqdm-4.62.3.tar.gz", hash = "sha256:d359de7217506c9851b7869f3708d8ee53ed70a1b8edbba4dbcb47442592920d"},
+]
+types-docutils = [
+    {file = "types-docutils-0.17.1.tar.gz", hash = "sha256:6a7473d845fb15266d0a1742a5dfa2cf5240ddd8a64e4de9646f88a72c424c00"},
+    {file = "types_docutils-0.17.1-py3-none-any.whl", hash = "sha256:e7dc9db04f6dcc78fd7d903b99d9b4dc3c8b296e3f151114207a8f102e84361e"},
+]
+types-pygments = [
+    {file = "types-Pygments-2.9.5.tar.gz", hash = "sha256:84f29d325f90de2cbf1ff026be76eba5b9851a44e97c9ec8b828bcd3f097b3a0"},
+    {file = "types_Pygments-2.9.5-py3-none-any.whl", hash = "sha256:4805e1618e5d89d8b397f8eeb96e6179e31f221af2bb77b81dec7bff6f1a4adc"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.0.1-py3-none-any.whl", hash = "sha256:7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b"},
